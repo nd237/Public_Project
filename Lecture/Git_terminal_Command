@@ -1,0 +1,46 @@
+git --version     #obtain version 
+-------------------------------------------------------------------set config variable---------------------------------------------------------
+git config --global user.name "enter the name"
+git config --global user.email "enter email"
+git config --list 
+-------------------------------------------------------------------info about name-------------------------------------------------------------
+git help Name
+-----------------------------------------------------------Tracking an existing repository-----------------------------------------------------
+git init
+rm -rf .git # to stop tracking that repository
+git status #check the status 
+--------------------------------------------------------crate a directory to put all the ignore file-------------------------------------------
+touch .gitignore
+----------------------------------------------------------Add file to be committed-------------------------------------------------------------
+git add -A -----------> to add all file
+git add nomeFile -----> to add only nomeFile
+git reset ---------> to remove file from the commit area 
+--------------------------------------------------------------------Commit---------------------------------------------------------------------
+git commit -m "message"
+git log
+-------------------------------------------------------------Clonning Remote Repository--------------------------------------------------------
+git clone URL
+git remote -v
+git branch -a
+git diff # lists the changed brought to the code
+---------------------------------------------------------------Push file-----------------------------------------------------------------------
+git pull origin master
+git push origin master #push to the master branch
+------------------------------------------------------------Create a Branch--------------------------------------------------------------------
+git branch NomeBranch
+git checkout NomeBranch #to start working on that branch
+git branch # list all the branches in my repository
+----------------------------------------------------------Push to the disired branch-----------------------------------------------------------
+git push -u origin NomeBranch
+-------------------------------------------------------------Merge a branch with master--------------------------------------------------------
+git checkout master
+git pull origin master
+git branch --merged
+git merge NomeBranch
+git push origin master
+----------------------------------------------------------------Delete a branch after merging--------------------------------------------------
+git branch --merged
+git branch -d NomeBranch
+git branch -a
+git push origin --delete NomeBranch
+git merge -- abort #to abort the merge

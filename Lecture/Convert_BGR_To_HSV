@@ -1,0 +1,26 @@
+                                                           RGB (Red Green Blue)
+
+The RGB (Red, Green, Blue) color model is the most known, and the most used every day. It defines a color space in terms of three components:
+
+Red, which ranges from 0-255
+Green, which ranges from 0-255
+Blue, which ranges from 0-255
+
+The RGB color model is an additive one. In other words, Red, Green and Blue values (known as the three primary colors) are combined to reproduce other colors.
+For example, the color "Red" can be represented as [R=255, G=0, B=0], "Violet" as [R=238, G=130, B=238], etc.
+
+ -----------------------------------------------------------Convert BGR TO HSV-----------------------------------------------------------------
+import numpy as np
+import cv2
+
+green = np.uint8([[[0, 255, 0]]]) #here insert the BGR values which you want to convert to HSV values
+
+hsvGreen = cv2.cvtColor(green, cv2.COLOR_BGR2HSV) #i want tonvert the green color into its corresponding HSV values
+
+print(hsvGreen)
+
+lowerLimit = hsvGreen[0][0][0] - 10, 100, 100
+upperLimit = hsvGreen[0][0][0] + 10, 255, 255
+
+print(upperLimit)
+print(lowerLimit)
