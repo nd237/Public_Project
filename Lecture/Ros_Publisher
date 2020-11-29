@@ -2,16 +2,16 @@
    1 #!/usr/bin/env python
    2 # license removed for brevity
    3 import rospy
-   4 from std_msgs.msg import String
+   4 from std_msgs.msg import String #import the custum message
    5 
    6 def talker():
-   7     pub = rospy.Publisher('chatter', String, queue_size=10)
-   8     rospy.init_node('talker', anonymous=True)
+   7     pub = rospy.Publisher('chatter', String, queue_size=10) #'chatter' is the name of the topic (where i publish the message)
+   8     rospy.init_node('talker', anonymous=True) # define 'talker' as the node
    9     rate = rospy.Rate(10) # 10hz
   10     while not rospy.is_shutdown():
   11         hello_str = "hello world %s" % rospy.get_time()
   12         rospy.loginfo(hello_str)
-  13         pub.publish(hello_str)
+  13         pub.publish(hello_str)#publisch the message
   14         rate.sleep()
   15 
   16 if __name__ == '__main__':
