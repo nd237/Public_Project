@@ -11,7 +11,7 @@
 NB: std_msgs     is a package which allows me to use the String type for message
     rospy        is a pure Python client library for ROS
 ---------------------------------------------------------------Writing a Message---------------------------------------------------------------
-1)create an another package who will contains only the custum message
+1)create an another package who will contains only the custum message The costume message will have .msg as extension
 2)rosmsg show Package_name/MessageFile
 ---------------------------------------------------------------Writing the publisching node----------------------------------------------------
 1)roscd Package_Name
