@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="StudentDataBaseWPfModelStoreContainer" CdmEntityContainer="StudentDataBaseWPfEntities">
+    <EntitySetMapping Name="PersonIDs">
+      <EntityTypeMapping TypeName="StudentDataBaseWPfModel.PersonID">
+        <MappingFragment StoreEntitySet="PersonID">
+          <ScalarProperty Name="Nome" ColumnName="Nome" />
+          <ScalarProperty Name="Cognome" ColumnName="Cognome" />
+          <ScalarProperty Name="Eta" ColumnName="Eta" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Productselecteds">
+      <EntityTypeMapping TypeName="StudentDataBaseWPfModel.Productselected">
+        <MappingFragment StoreEntitySet="Productselected">
+          <ScalarProperty Name="Nome" ColumnName="Nome" />
+          <ScalarProperty Name="Tv" ColumnName="Tv" />
+          <ScalarProperty Name="Vehicle" ColumnName="Vehicle" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
